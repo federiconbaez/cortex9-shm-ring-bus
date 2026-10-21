@@ -34,7 +34,7 @@ Cifras en `BENCH.md` (compartida, mensajes de 8 bytes, lote 256, 0 errores):
 - Go→Rust ~618 M/s
 - Python→Rust ~7 M/s (el intérprete no llega a 50 M/s)
 
-La meta de 50 M/s se cumple en C, C++, Go y Rust. Python puro no. Falta MPSC y la máquina de enrutamiento.
+La meta de 50 M/s se cumple en C, C++, Go y Rust. Python puro no. (El enrutamiento llegó en v2, ver abajo.)
 
 
 ## Avance v2 (20/10, ~23:10 hora de Buenos Aires)
