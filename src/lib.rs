@@ -105,6 +105,7 @@ impl Drop for Ring {
 #[cfg(test)]
 mod tests {
     use super::*;
+    /// Integridad SPSC entre HILOS del mismo proceso (no entre procesos).
     #[test]
     fn orden_e_integridad_entre_hilos() {
         let name = format!("fnbr-test-{}", std::process::id());
@@ -115,7 +116,7 @@ mod tests {
             let mut next = 0u64; let mut buf = [0u64; 37];
             while next < N {
                 let k = buf.len().min((N - next) as usize);
-                for i in 0..k { buf[i] = next + i as u64; }
+                for (i, slot) in buf.iter_mut().take(k).enumerate() { *slot = next + i as u64; }
                 let mut off = 0;
                 while off < k { off += p.push_batch(&buf[off..k]); }
                 next += k as u64;

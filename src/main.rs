@@ -11,7 +11,7 @@ fn main() {
         let mut buf = vec![0u64; batch]; let mut next = 0u64;
         while next < n {
             let k = batch.min((n - next) as usize);
-            for i in 0..k { buf[i] = next + i as u64; }
+            for (i, slot) in buf.iter_mut().take(k).enumerate() { *slot = next + i as u64; }
             let mut off = 0;
             while off < k { let w = r.push_batch(&buf[off..k]); if w == 0 { std::hint::spin_loop(); } off += w; }
             next += k as u64;

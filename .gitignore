@@ -1,1 +1,6 @@
 target/
+clients/c/producer
+clients/c/consumer_bench
+clients/cpp/producer
+clients/go/producer
+__pycache__/
