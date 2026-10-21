@@ -37,3 +37,12 @@ route_bench productores=1 consumidores=1 total=50000000 segundos=0.230 msg_por_s
 | socket Unix | 7,7–7,9 µs | 9,9–10,5 µs | 17,7–19,9 µs | 0 |
 
 Salvedad: el anillo espera con espera activa (spin) y ocupa un núcleo por lado; pipe y socket duermen en el kernel. La ventaja de latencia se paga en CPU.
+
+### Entre lenguajes: Go -> C++ -> Go (RTT, 200k muestras, 3 corridas)
+`clients/lat/correr.sh` (Go crea los anillos y mide; C++ responde x+1)
+
+| canal | p50 | p99 | p99,9 | errores |
+|---|---|---|---|---|
+| anillo shm Go<->C++ | 0,54–0,61 µs | 0,66–0,77 µs | 0,96–1,14 µs | 0 |
+
+Frente al pipe/socket en C de arriba (p50 ~8 µs), sigue siendo unas 13–15 veces menos latencia, aun cruzando dos runtimes. Misma salvedad de espera activa.

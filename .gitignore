@@ -4,3 +4,5 @@ clients/c/consumer_bench
 clients/cpp/producer
 clients/go/producer
 __pycache__/
+clients/lat/ping
+clients/lat/pong
