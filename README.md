@@ -8,7 +8,7 @@ Ring buffer lock-free SPSC sobre `/dev/shm` en Rust, con clientes en C, C++, Go 
 
 **Criterio de verificado:** benchmark reproducible; 50 M/s cuenta solo si el número medido lo muestra, entre procesos y entre lenguajes.
 
-**Estado:** núcleo SPSC verificado (hilos y procesos); clientes C/C++/Go/Python medidos; falta MPSC y enrutamiento.
+**Estado:** núcleo SPSC verificado; clientes C/C++/Go/Python medidos; máquina de enrutamiento N→M verificada (>200 M/s e2e).
 
 ## Cómo correr
 
@@ -35,3 +35,14 @@ Cifras en `BENCH.md` (compartida, mensajes de 8 bytes, lote 256, 0 errores):
 - Python→Rust ~7 M/s (el intérprete no llega a 50 M/s)
 
 La meta de 50 M/s se cumple en C, C++, Go y Rust. Python puro no. Falta MPSC y la máquina de enrutamiento.
+
+
+## Avance v2 (20/10, ~23:10 hora de Buenos Aires)
+
+Máquina de estados de enrutamiento sobre anillos SPSC (fan-in/fan-out), mensajes `pack(dst, seq)`:
+
+- `router`, `route_prod`, `route_cons`, `route_bench`
+- Test `enrutamiento::maquina_enruta_sin_perder` (100 k msgs, 0 mal destino)
+- Medido: router solo ~260–340 M/s; e2e 4→2 ~238 M/s; 1→1 ~205 M/s; 0 drops / 0 mal_destino
+
+Sigue por encima de 50 M/s con enrutamiento real, no solo ping-pong SPSC.

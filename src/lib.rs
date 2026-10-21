@@ -102,6 +102,18 @@ impl Drop for Ring {
     fn drop(&mut self) { unsafe { libc::munmap(self.base as *mut _, self.len); } }
 }
 
+
+/// Mensaje enrutable empaquetado en u64: [dst:16][seq:48].
+#[inline]
+pub fn pack(dst: u16, seq: u64) -> u64 {
+    ((dst as u64) << 48) | (seq & ((1u64 << 48) - 1))
+}
+#[inline]
+pub fn unpack(m: u64) -> (u16, u64) {
+    ((m >> 48) as u16, m & ((1u64 << 48) - 1))
+}
+
+
 #[cfg(test)]
 mod tests {
     use super::*;
