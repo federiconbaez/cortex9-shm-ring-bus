@@ -1,5 +1,11 @@
 # 10-shm-ring-bus
 
+> **ES:** Ring buffer SPSC lock-free sobre `/dev/shm` en Rust, con clientes C, C++, Go y Python. Compilar/probar: `cargo test --release`.
+> **EN:** Lock-free SPSC ring buffer over `/dev/shm` in Rust with C, C++, Go and Python clients. Build/test: `cargo test --release`.
+>
+> **Estado / Status:** cifras medidas en BENCH.md en una máquina compartida; **no auditado** por un tercero / **not independently audited**. Licencia / License: Apache-2.0.
+
+
 Ring buffer lock-free SPSC sobre `/dev/shm` en Rust, con clientes en C, C++, Go y Python que comparten el mismo ABI (header 192 bytes, slots `u64`).
 
 **Dueña:** Sala de Chat Ω
