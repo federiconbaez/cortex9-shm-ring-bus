@@ -1,0 +1,7 @@
+kernel 6.12.113+; nproc 8; Model name: Intel(R) Xeon(R) Processor; Hypervisor KVM; threads/core 1
+cargo 1.99.1 (5f94df478 2026-08-27)
+rustc 1.99.1 (58cf8f9c3 2026-10-13)
+gcc (Debian 14.2.0-19) 14.2.0
+go version go1.27.3 linux/amd64
+Python 3.13.5
+C++: clang version 22.1.8 vía zig 0.17.1 (g++ no disponible: apt sin red)

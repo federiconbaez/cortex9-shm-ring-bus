@@ -1,0 +1,8 @@
+## afinidad ping(cpu0) pong(cpuK) 2026-11-09 07:24:36 ART load=1.36 1.58 1.16
+cpu0<->cpu1: go->c++->go anillo n=200000 p50=0.61us p99=0.71us p99.9=1.48us max=53.39us errores=0
+cpu0<->cpu2: go->c++->go anillo n=200000 p50=0.61us p99=0.72us p99.9=1.24us max=487.01us errores=0
+cpu0<->cpu3: go->c++->go anillo n=200000 p50=0.65us p99=0.79us p99.9=1.47us max=61.71us errores=0
+cpu0<->cpu4: go->c++->go anillo n=200000 p50=0.60us p99=1.15us p99.9=1.96us max=75.84us errores=0
+cpu0<->cpu5: go->c++->go anillo n=200000 p50=0.59us p99=0.72us p99.9=1.06us max=59.70us errores=0
+cpu0<->cpu6: go->c++->go anillo n=200000 p50=0.61us p99=0.72us p99.9=1.09us max=33.95us errores=0
+cpu0<->cpu7: go->c++->go anillo n=200000 p50=0.60us p99=0.70us p99.9=1.22us max=32.29us errores=0

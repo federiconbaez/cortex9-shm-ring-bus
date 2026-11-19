@@ -1,0 +1,31 @@
+## rep=1 latencia.c 2026-11-09 07:20:29 ART load=1.15 1.38 0.96 nproc=8
+anillo_shm   n=200000 p50=0.38us p99=0.50us p99.9=0.85us max=23.86us errores=0
+pipe         n=200000 p50=7.69us p99=10.06us p99.9=16.51us max=491.01us errores=0
+socket_unix  n=200000 p50=7.24us p99=11.13us p99.9=16.91us max=201.47us errores=0
+## rep=1 go<->c++ 2026-11-09 07:20:32 ART load=1.30 1.40 0.97
+go->c++->go anillo n=200000 p50=0.52us p99=0.72us p99.9=1.08us max=45.37us errores=0
+## rep=2 latencia.c 2026-11-09 07:20:33 ART load=1.30 1.40 0.97 nproc=8
+anillo_shm   n=200000 p50=0.44us p99=0.59us p99.9=0.81us max=25.10us errores=0
+pipe         n=200000 p50=7.59us p99=10.32us p99.9=22.41us max=499.04us errores=0
+socket_unix  n=200000 p50=7.24us p99=9.47us p99.9=15.39us max=539.72us errores=0
+## rep=2 go<->c++ 2026-11-09 07:20:36 ART load=1.44 1.43 0.98
+go->c++->go anillo n=200000 p50=0.60us p99=0.70us p99.9=0.90us max=36.83us errores=0
+## rep=3 latencia.c 2026-11-09 07:20:36 ART load=1.44 1.43 0.98 nproc=8
+anillo_shm   n=200000 p50=0.38us p99=0.52us p99.9=0.98us max=30.00us errores=0
+pipe         n=200000 p50=7.58us p99=15.17us p99.9=27.37us max=859.78us errores=0
+socket_unix  n=200000 p50=7.39us p99=10.84us p99.9=15.48us max=27030.97us errores=0
+## rep=3 go<->c++ 2026-11-09 07:20:40 ART load=1.56 1.46 0.99
+go->c++->go anillo n=200000 p50=0.09us p99=0.11us p99.9=0.12us max=58.85us errores=0
+## rep=4 latencia.c 2026-11-09 07:20:40 ART load=1.56 1.46 0.99 nproc=8
+anillo_shm   n=200000 p50=0.45us p99=0.55us p99.9=0.89us max=23.89us errores=0
+pipe         n=200000 p50=7.52us p99=10.12us p99.9=17.18us max=21129.29us errores=0
+socket_unix  n=200000 p50=7.18us p99=10.20us p99.9=16.46us max=26321.87us errores=0
+## rep=4 go<->c++ 2026-11-09 07:20:43 ART load=1.56 1.46 0.99
+go->c++->go anillo n=200000 p50=0.59us p99=0.68us p99.9=1.04us max=43.88us errores=0
+## rep=5 latencia.c 2026-11-09 07:20:44 ART load=1.56 1.46 0.99 nproc=8
+anillo_shm   n=200000 p50=0.42us p99=0.56us p99.9=0.73us max=30.59us errores=0
+pipe         n=200000 p50=7.44us p99=10.14us p99.9=17.64us max=14392.47us errores=0
+socket_unix  n=200000 p50=7.14us p99=11.15us p99.9=16.50us max=8495.06us errores=0
+## rep=5 go<->c++ 2026-11-09 07:20:47 ART load=1.60 1.47 1.00
+go->c++->go anillo n=200000 p50=0.59us p99=0.72us p99.9=1.22us max=43.69us errores=0
+## fin 2026-11-09 07:20:47 ART load=1.60 1.47 1.00

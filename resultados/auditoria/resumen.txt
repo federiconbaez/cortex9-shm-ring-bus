@@ -1,0 +1,51 @@
+anillo_shm                       p50          n=5 min=0.38 med=0.42 max=0.45
+anillo_shm                       p99          n=5 min=0.5 med=0.55 max=0.59
+anillo_shm                       p999         n=5 min=0.73 med=0.85 max=0.98
+anillo_shm                       err          n=5 min=0 med=0 max=0
+pipe                             p50          n=5 min=7.44 med=7.58 max=7.69
+pipe                             p99          n=5 min=10.06 med=10.14 max=15.17
+pipe                             p999         n=5 min=16.51 med=17.64 max=27.37
+pipe                             err          n=5 min=0 med=0 max=0
+socket_unix                      p50          n=5 min=7.14 med=7.24 max=7.39
+socket_unix                      p99          n=5 min=9.47 med=10.84 max=11.15
+socket_unix                      p999         n=5 min=15.39 med=16.46 max=16.91
+socket_unix                      err          n=5 min=0 med=0 max=0
+go->c++->go anillo               p50          n=5 min=0.09 med=0.59 max=0.6
+go->c++->go anillo               p99          n=5 min=0.11 med=0.7 max=0.72
+go->c++->go anillo               p999         n=5 min=0.12 med=1.04 max=1.22
+go->c++->go anillo               err          n=5 min=0 med=0 max=0
+go->c++->go pipe                 p50          n=5 min=8.07 med=8.34 max=8.59
+go->c++->go pipe                 p99          n=5 min=10.83 med=11.41 max=17.61
+go->c++->go pipe                 p999         n=5 min=20.61 med=20.93 max=29.23
+go->c++->go pipe                 err          n=5 min=0 med=0 max=0
+pipe_spin                        p50          n=5 min=1.6 med=1.73 max=1.87
+pipe_spin                        p99          n=5 min=2 med=2.26 max=3.04
+pipe_spin                        p999         n=5 min=2.72 med=4.97 max=7.69
+pipe_spin                        err          n=5 min=0 med=0 max=0
+rust-rust n=100000000 lote=1     Mps          n=5 min=19.5 med=22.1 max=24.8
+rust-rust n=100000000 lote=1     err          n=5 min=0 med=0 max=0
+rust-rust n=300000000 lote=256   Mps          n=5 min=1006.5 med=1206.9 max=1297.9
+rust-rust n=300000000 lote=256   err          n=5 min=0 med=0 max=0
+cross rust                       Mps          n=5 min=849.2 med=1170.1 max=1211.5
+cross rust                       err          n=5 min=0 med=0 max=0
+cross c                          Mps          n=5 min=1143.7 med=1201.2 max=1241.9
+cross c                          err          n=5 min=0 med=0 max=0
+cross cpp                        Mps          n=5 min=1177.2 med=1194.9 max=1274
+cross cpp                        err          n=5 min=0 med=0 max=0
+cross go                         Mps          n=5 min=802 med=830 max=874.7
+cross go                         err          n=5 min=0 med=0 max=0
+cross python                     Mps          n=5 min=10.9 med=11.6 max=12
+cross python                     err          n=5 min=0 med=0 max=0
+route cons                       mal_destino  n=25 min=0 med=0 max=0
+router 4->2                      Mps          n=5 min=345.9 med=368.1 max=419.7
+e2e 4->2                         Mps          n=5 min=243.8 med=254.3 max=277.5
+router 2->2                      Mps          n=5 min=292.5 med=361.2 max=371.7
+e2e 2->2                         Mps          n=5 min=215.7 med=251.1 max=256.7
+router 1->1                      Mps          n=5 min=272.2 med=329.5 max=332.1
+e2e 1->1                         Mps          n=5 min=215 med=249.7 max=251.2
+cociente anillo_shm/pipe p50: 0.049 0.058 0.050 0.060 0.056  max=0.060
+cociente go-c++ anillo/pipe go-c++ p50 (reps emparejadas por índice, corridas distintas): 0.062 0.070 0.010 0.073 0.072  max=0.073
+cociente anillo_shm/pipe_spin p50: 0.220 0.235 0.207 0.269 0.262  max=0.269
+cociente anillo_shm/pipe p99: 0.050 0.057 0.034 0.054 0.055  max=0.057
+cociente go-c++ anillo/pipe go-c++ p99 (reps emparejadas por índice, corridas distintas): 0.063 0.061 0.006 0.061 0.066  max=0.066
+cociente anillo_shm/pipe_spin p99: 0.164 0.248 0.230 0.266 0.280  max=0.280

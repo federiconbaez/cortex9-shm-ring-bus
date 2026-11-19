@@ -1,0 +1,126 @@
+## rep=1 rust-rust 2026-11-09 07:21:43 ART load=1.77 1.53 1.05 nproc=8
+mensajes=100000000 lote=1 segundos=4.067 msg_por_seg=24.6M errores_de_secuencia=0
+mensajes=300000000 lote=256 segundos=0.251 msg_por_seg=1195.5M errores_de_secuencia=0
+## rep=1 cross rust 2026-11-09 07:21:47 ART load=1.94 1.57 1.06 nproc=8
+lang=rust mensajes=30000000 lote=256 segundos=0.035 msg_por_seg=849.2M errores=0
+## rep=1 cross c 2026-11-09 07:21:47 ART load=1.94 1.57 1.06 nproc=8
+lang=c mensajes=30000000 lote=256 segundos=0.026 msg_por_seg=1172.2M errores=0
+## rep=1 cross cpp 2026-11-09 07:21:47 ART load=1.94 1.57 1.06 nproc=8
+lang=cpp mensajes=30000000 lote=256 segundos=0.025 msg_por_seg=1187.2M errores=0
+## rep=1 cross go 2026-11-09 07:21:47 ART load=1.94 1.57 1.06 nproc=8
+lang=go mensajes=30000000 lote=256 segundos=0.034 msg_por_seg=874.7M errores=0
+## rep=1 cross python 2026-11-09 07:21:47 ART load=1.94 1.57 1.06 nproc=8
+lang=python mensajes=30000000 lote=256 segundos=2.503 msg_por_seg=12.0M errores=0
+## rep=1 route 2026-11-09 07:21:50 ART load=2.03 1.59 1.07 nproc=8
+cons id=1 recibidos=20000000 mal_destino=0
+cons id=0 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.109 msg_por_seg=368.1M n_in=4 n_out=2
+route_bench productores=4 consumidores=2 total=40000000 segundos=0.157 msg_por_seg=254.3M
+cons id=1 recibidos=20000000 mal_destino=0
+cons id=0 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.108 msg_por_seg=371.7M n_in=2 n_out=2
+route_bench productores=2 consumidores=2 total=40000000 segundos=0.156 msg_por_seg=256.7M
+cons id=0 recibidos=50000000 mal_destino=0
+router forwarded=50000000 drops=0 segundos=0.152 msg_por_seg=329.5M n_in=1 n_out=1
+route_bench productores=1 consumidores=1 total=50000000 segundos=0.200 msg_por_seg=249.7M
+## rep=2 rust-rust 2026-11-09 07:21:50 ART load=2.03 1.59 1.07 nproc=8
+mensajes=100000000 lote=1 segundos=4.528 msg_por_seg=22.1M errores_de_secuencia=0
+mensajes=300000000 lote=256 segundos=0.298 msg_por_seg=1006.5M errores_de_secuencia=0
+## rep=2 cross rust 2026-11-09 07:21:55 ART load=2.11 1.62 1.09 nproc=8
+lang=rust mensajes=30000000 lote=256 segundos=0.027 msg_por_seg=1099.8M errores=0
+## rep=2 cross c 2026-11-09 07:21:55 ART load=2.11 1.62 1.09 nproc=8
+lang=c mensajes=30000000 lote=256 segundos=0.026 msg_por_seg=1143.7M errores=0
+## rep=2 cross cpp 2026-11-09 07:21:55 ART load=2.11 1.62 1.09 nproc=8
+lang=cpp mensajes=30000000 lote=256 segundos=0.024 msg_por_seg=1274.0M errores=0
+## rep=2 cross go 2026-11-09 07:21:55 ART load=2.11 1.62 1.09 nproc=8
+lang=go mensajes=30000000 lote=256 segundos=0.036 msg_por_seg=842.8M errores=0
+## rep=2 cross python 2026-11-09 07:21:55 ART load=2.11 1.62 1.09 nproc=8
+lang=python mensajes=30000000 lote=256 segundos=2.553 msg_por_seg=11.7M errores=0
+## rep=2 route 2026-11-09 07:21:58 ART load=2.11 1.62 1.09 nproc=8
+router forwarded=40000000 drops=0 segundos=0.116 msg_por_seg=345.9M n_in=4 n_out=2
+cons id=0 recibidos=20000000 mal_destino=0
+cons id=1 recibidos=20000000 mal_destino=0
+route_bench productores=4 consumidores=2 total=40000000 segundos=0.164 msg_por_seg=243.8M
+cons id=1 recibidos=20000000 mal_destino=0
+cons id=0 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.112 msg_por_seg=358.1M n_in=2 n_out=2
+route_bench productores=2 consumidores=2 total=40000000 segundos=0.160 msg_por_seg=250.7M
+cons id=0 recibidos=50000000 mal_destino=0
+router forwarded=50000000 drops=0 segundos=0.151 msg_por_seg=331.1M n_in=1 n_out=1
+route_bench productores=1 consumidores=1 total=50000000 segundos=0.200 msg_por_seg=250.6M
+## rep=3 rust-rust 2026-11-09 07:21:59 ART load=2.11 1.62 1.09 nproc=8
+mensajes=100000000 lote=1 segundos=4.031 msg_por_seg=24.8M errores_de_secuencia=0
+mensajes=300000000 lote=256 segundos=0.239 msg_por_seg=1257.2M errores_de_secuencia=0
+## rep=3 cross rust 2026-11-09 07:22:03 ART load=2.18 1.64 1.10 nproc=8
+lang=rust mensajes=30000000 lote=256 segundos=0.026 msg_por_seg=1174.5M errores=0
+## rep=3 cross c 2026-11-09 07:22:03 ART load=2.18 1.64 1.10 nproc=8
+lang=c mensajes=30000000 lote=256 segundos=0.024 msg_por_seg=1240.8M errores=0
+## rep=3 cross cpp 2026-11-09 07:22:03 ART load=2.18 1.64 1.10 nproc=8
+lang=cpp mensajes=30000000 lote=256 segundos=0.024 msg_por_seg=1229.8M errores=0
+## rep=3 cross go 2026-11-09 07:22:03 ART load=2.18 1.64 1.10 nproc=8
+lang=go mensajes=30000000 lote=256 segundos=0.037 msg_por_seg=804.1M errores=0
+## rep=3 cross python 2026-11-09 07:22:03 ART load=2.18 1.64 1.10 nproc=8
+lang=python mensajes=30000000 lote=256 segundos=2.750 msg_por_seg=10.9M errores=0
+## rep=3 route 2026-11-09 07:22:06 ART load=2.25 1.66 1.11 nproc=8
+cons id=0 recibidos=20000000 mal_destino=0
+cons id=1 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.107 msg_por_seg=373.4M n_in=4 n_out=2
+route_bench productores=4 consumidores=2 total=40000000 segundos=0.156 msg_por_seg=256.6M
+cons id=0 recibidos=20000000 mal_destino=0
+cons id=1 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.111 msg_por_seg=361.2M n_in=2 n_out=2
+route_bench productores=2 consumidores=2 total=40000000 segundos=0.159 msg_por_seg=251.1M
+cons id=0 recibidos=50000000 mal_destino=0
+router forwarded=50000000 drops=0 segundos=0.184 msg_por_seg=272.2M n_in=1 n_out=1
+route_bench productores=1 consumidores=1 total=50000000 segundos=0.233 msg_por_seg=215.0M
+## rep=4 rust-rust 2026-11-09 07:22:06 ART load=2.25 1.66 1.11 nproc=8
+mensajes=100000000 lote=1 segundos=4.912 msg_por_seg=20.4M errores_de_secuencia=0
+mensajes=300000000 lote=256 segundos=0.249 msg_por_seg=1206.9M errores_de_secuencia=0
+## rep=4 cross rust 2026-11-09 07:22:11 ART load=2.39 1.70 1.12 nproc=8
+lang=rust mensajes=30000000 lote=256 segundos=0.026 msg_por_seg=1170.1M errores=0
+## rep=4 cross c 2026-11-09 07:22:12 ART load=2.39 1.70 1.12 nproc=8
+lang=c mensajes=30000000 lote=256 segundos=0.025 msg_por_seg=1201.2M errores=0
+## rep=4 cross cpp 2026-11-09 07:22:12 ART load=2.39 1.70 1.12 nproc=8
+lang=cpp mensajes=30000000 lote=256 segundos=0.025 msg_por_seg=1177.2M errores=0
+## rep=4 cross go 2026-11-09 07:22:12 ART load=2.39 1.70 1.12 nproc=8
+lang=go mensajes=30000000 lote=256 segundos=0.037 msg_por_seg=802.0M errores=0
+## rep=4 cross python 2026-11-09 07:22:12 ART load=2.39 1.70 1.12 nproc=8
+lang=python mensajes=30000000 lote=256 segundos=2.585 msg_por_seg=11.6M errores=0
+## rep=4 route 2026-11-09 07:22:14 ART load=2.39 1.70 1.12 nproc=8
+router forwarded=40000000 drops=0 segundos=0.095 msg_por_seg=419.7M n_in=4 n_out=2
+cons id=0 recibidos=20000000 mal_destino=0
+cons id=1 recibidos=20000000 mal_destino=0
+route_bench productores=4 consumidores=2 total=40000000 segundos=0.144 msg_por_seg=277.5M
+cons id=1 recibidos=20000000 mal_destino=0
+cons id=0 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.137 msg_por_seg=292.5M n_in=2 n_out=2
+route_bench productores=2 consumidores=2 total=40000000 segundos=0.185 msg_por_seg=215.7M
+cons id=0 recibidos=50000000 mal_destino=0
+router forwarded=50000000 drops=0 segundos=0.156 msg_por_seg=320.9M n_in=1 n_out=1
+route_bench productores=1 consumidores=1 total=50000000 segundos=0.205 msg_por_seg=244.5M
+## rep=5 rust-rust 2026-11-09 07:22:15 ART load=2.52 1.74 1.14 nproc=8
+mensajes=100000000 lote=1 segundos=5.117 msg_por_seg=19.5M errores_de_secuencia=0
+mensajes=300000000 lote=256 segundos=0.231 msg_por_seg=1297.9M errores_de_secuencia=0
+## rep=5 cross rust 2026-11-09 07:22:20 ART load=2.55 1.76 1.15 nproc=8
+lang=rust mensajes=30000000 lote=256 segundos=0.025 msg_por_seg=1211.5M errores=0
+## rep=5 cross c 2026-11-09 07:22:20 ART load=2.55 1.76 1.15 nproc=8
+lang=c mensajes=30000000 lote=256 segundos=0.024 msg_por_seg=1241.9M errores=0
+## rep=5 cross cpp 2026-11-09 07:22:20 ART load=2.55 1.76 1.15 nproc=8
+lang=cpp mensajes=30000000 lote=256 segundos=0.025 msg_por_seg=1194.9M errores=0
+## rep=5 cross go 2026-11-09 07:22:20 ART load=2.55 1.76 1.15 nproc=8
+lang=go mensajes=30000000 lote=256 segundos=0.036 msg_por_seg=830.0M errores=0
+## rep=5 cross python 2026-11-09 07:22:20 ART load=2.55 1.76 1.15 nproc=8
+lang=python mensajes=30000000 lote=256 segundos=2.711 msg_por_seg=11.1M errores=0
+## rep=5 route 2026-11-09 07:22:23 ART load=2.55 1.76 1.15 nproc=8
+router forwarded=40000000 drops=0 segundos=0.114 msg_por_seg=352.3M n_in=4 n_out=2
+cons id=0 recibidos=20000000 mal_destino=0
+cons id=1 recibidos=20000000 mal_destino=0
+route_bench productores=4 consumidores=2 total=40000000 segundos=0.162 msg_por_seg=246.4M
+cons id=1 recibidos=20000000 mal_destino=0
+cons id=0 recibidos=20000000 mal_destino=0
+router forwarded=40000000 drops=0 segundos=0.109 msg_por_seg=367.0M n_in=2 n_out=2
+route_bench productores=2 consumidores=2 total=40000000 segundos=0.157 msg_por_seg=254.1M
+cons id=0 recibidos=50000000 mal_destino=0
+router forwarded=50000000 drops=0 segundos=0.151 msg_por_seg=332.1M n_in=1 n_out=1
+route_bench productores=1 consumidores=1 total=50000000 segundos=0.199 msg_por_seg=251.2M
+## fin 2026-11-09 07:22:24 ART load=2.55 1.76 1.15 nproc=8

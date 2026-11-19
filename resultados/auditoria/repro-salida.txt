@@ -1,0 +1,33 @@
+# salidas de los repros, 2026-11-09 07:24:58 ART, commit acbd2ac
+### reattach
+antes del reinicio: consumidor leyó 5: [100, 101, 102, 103, 104]
+productor reiniciado escribió 1 mensaje (200)
+consumidor leyó 8 mensajes: [0, 0, 0, 200, 101, 102, 103, 104]  (esperado: 1 mensaje [200])
+siguiente pop: 8 mensajes: [0, 0, 0, 200, 101, 102, 103, 104]
+rc=0
+### recreate
+con el anillo lleno (cap=8) el productor escribió 8 + 8 = 16 mensajes
+consumidor leyó 16: [24, 25, 26, 27, 28, 29, 30, 31, 24, 25, 26, 27, 28, 29, 30, 31]  (esperado 16..24 y después 24..32)
+rc=0
+### dosprod
+enviados=4000000 recibidos=2143511642 (por productor [11541566, 2131970076]) perdidos=-2139511642
+rc=0
+### hostil
+consumidor aceptó 64 mensajes con head-tail = 1e6 > cap = 8: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+rc=0
+### sigbus
+abriendo /dev/shm/audit10-sigbus-161280 (0 bytes) con create=false...
+--: line 1: 161279 Bus error               timeout 10 repro/target/release/sigbus
+rc=135 (135 = 128+SIGBUS)
+### crash.sh
+consumidor pid=161284 productor pid=161286
+5 s después del SIGKILL el consumidor sigue vivo:  100 R (%CPU, estado)
+matado a mano
+1
+repro/crash.sh: line 10: 161284 Killed                  ./target/release/shm_ring_bus 3000000000 256
+segmento /dev/shm huérfano queda (no hay limpieza ante crash)
+### tsan ring.h (control negativo: protocolo original)
+tsan ring.h: recibidos=2000000 errores=0
+### tsan control positivo (head con relaxed)
+SUMMARY: ThreadSanitizer: data race /workspace/audit-clones/10-shm-ring-bus-acbd2ac/resultados/auditoria/repro/ring_relaxed.h:76 in ring_pop
+tsan ring.h: recibidos=2000000 errores=0

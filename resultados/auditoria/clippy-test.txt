@@ -1,0 +1,37 @@
+2026-11-09 07:13:54 ART
+2.24 0.84 0.56 4/898 148300
+ Downloading crates ...
+  Downloaded libc v0.2.191
+   Compiling libc v0.2.191
+    Checking shm_ring_bus v0.1.0 (/workspace/audit-clones/10-shm-ring-bus-acbd2ac)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 4.16s
+exit=0
+   Compiling libc v0.2.191
+    Checking shm_ring_bus v0.1.0 (/workspace/audit-clones/10-shm-ring-bus-acbd2ac)
+    Finished `release` profile [optimized] target(s) in 1.02s
+     Running unittests src/lib.rs (target/release/deps/shm_ring_bus-698d1fbf8ad031e8)
+test tests::nunca_desborda ... ok
+test tests::orden_e_integridad_entre_hilos ... ok
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running unittests src/bin/cross_cons.rs (target/release/deps/cross_cons-bfba93939bf00d7b)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/producer.rs (target/release/deps/producer-1a531df91c0037fa)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/route_bench.rs (target/release/deps/route_bench-baa59cc9d27ead2f)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/route_cons.rs (target/release/deps/route_cons-63a579141565f7c8)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/route_prod.rs (target/release/deps/route_prod-375237e3d7c4b832)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/bin/router.rs (target/release/deps/router-62ca9af31b702488)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running unittests src/main.rs (target/release/deps/shm_ring_bus-d5bf8f721a78bbf8)
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+     Running tests/enrutamiento.rs (target/release/deps/enrutamiento-bc9d7bacfd73e1b9)
+test maquina_enruta_sin_perder ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+     Running tests/entre_procesos.rs (target/release/deps/entre_procesos-8ebb3623c5a2277b)
+test orden_e_integridad_entre_procesos ... ok
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+exit=0

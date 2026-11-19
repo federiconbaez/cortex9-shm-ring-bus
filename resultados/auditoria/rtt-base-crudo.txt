@@ -1,0 +1,16 @@
+## rep=1 2026-11-09 07:21:21 ART load=1.70 1.50 1.03 nproc=8
+go->c++->go pipe n=200000 p50=8.34us p99=11.41us p99.9=20.61us max=15821.48us errores=0
+pipe_spin    n=200000 p50=1.73us p99=3.04us p99.9=7.69us max=40.83us errores=0
+## rep=2 2026-11-09 07:21:24 ART load=1.70 1.50 1.03 nproc=8
+go->c++->go pipe n=200000 p50=8.52us p99=11.49us p99.9=20.75us max=7127.00us errores=0
+pipe_spin    n=200000 p50=1.87us p99=2.38us p99.9=3.27us max=62.89us errores=0
+## rep=3 2026-11-09 07:21:26 ART load=1.80 1.52 1.04 nproc=8
+go->c++->go pipe n=200000 p50=8.59us p99=17.61us p99.9=29.23us max=1626.09us errores=0
+pipe_spin    n=200000 p50=1.84us p99=2.26us p99.9=5.16us max=47.97us errores=0
+## rep=4 2026-11-09 07:21:28 ART load=1.80 1.52 1.04 nproc=8
+go->c++->go pipe n=200000 p50=8.07us p99=11.17us p99.9=22.22us max=1570.61us errores=0
+pipe_spin    n=200000 p50=1.67us p99=2.07us p99.9=4.97us max=60.26us errores=0
+## rep=5 2026-11-09 07:21:31 ART load=1.82 1.53 1.04 nproc=8
+go->c++->go pipe n=200000 p50=8.19us p99=10.83us p99.9=20.93us max=863.56us errores=0
+pipe_spin    n=200000 p50=1.60us p99=2.00us p99.9=2.72us max=293.21us errores=0
+## fin 2026-11-09 07:21:33 ART load=1.82 1.53 1.04

@@ -1,0 +1,8 @@
+[package]
+name = "repro10"
+version = "0.0.0"
+edition = "2024"
+[dependencies]
+shm_ring_bus = { path = "../../.." }
+libc = "0.2"
+[workspace]
